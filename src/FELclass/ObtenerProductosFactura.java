@@ -276,7 +276,7 @@ public class ObtenerProductosFactura {
                 list.add(t);
             }
             cn.close();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("error consulta DE LA TABLA " + e);
             return null;
         }

@@ -230,6 +230,7 @@ public class FEL_Encuentro extends javax.swing.JFrame {
             serie = object2.get("batch").toString();
             numero = object2.get("serial").toString();
             FechaCerti = object2.get("enrolledTimeStamp").toString();
+            System.out.println("mensaje = "+object2.get("message").toString());
             InsertarDatosFEL();
             /*autorizacion.setText(auto);
             lote.setText(lot);
@@ -593,6 +594,7 @@ public class FEL_Encuentro extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 //new FEL_Encuentro().setVisible(true);
             }

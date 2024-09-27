@@ -34,6 +34,7 @@ public class Opcion5 extends javax.swing.JPanel {
     int marca28 = 0;
     int marca29 = 0;
     int marca30 = 0;
+    int marca31 = 0;
     int id_pedido = 0;
     int id_producto = 0;
     ArrayList<Integer> Num = new ArrayList<>();
@@ -61,7 +62,10 @@ public class Opcion5 extends javax.swing.JPanel {
         String texto6 = "<html><center><body>PORCION DE<br>TORTILLAS</body></center></html>";
         PorciMayonesa.setText(texto6);
         String texto7 = "<html><center><body>PORCION DE<br>QUESO MOSARELA</body></center></html>";
-         Queso.setText(texto7);
+        Queso.setText(texto7);
+        String texto8 = "<html><center><body>TORTILLA<br>UNIDAD</body></center></html>";
+        Tortilla.setText(texto8); 
+         
     }
 
     private void Limpiar() {
@@ -82,6 +86,7 @@ public class Opcion5 extends javax.swing.JPanel {
         Botton28.setBackground(Botrojo);
         Botton29.setBackground(Botrojo);
         Botton30.setBackground(Botrojo);
+        Botton31.setBackground(Botrojo);
         marca15 = 0;   
         marca16 = 0;    
         marca17 = 0;  
@@ -98,6 +103,7 @@ public class Opcion5 extends javax.swing.JPanel {
         marca28 = 0;
         marca29 = 0;
         marca30 = 0;
+        marca31 = 0;
         Num.clear();
         NumSin.clear();
         cantidad.setText("1");
@@ -170,6 +176,8 @@ public class Opcion5 extends javax.swing.JPanel {
         PorciGuaca = new javax.swing.JLabel();
         Botton30 = new Clases.PanelRound();
         Quesadilla = new javax.swing.JLabel();
+        Botton31 = new Clases.PanelRound();
+        Tortilla = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         cantidad = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -700,6 +708,38 @@ public class Opcion5 extends javax.swing.JPanel {
             .addComponent(Quesadilla, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
         );
 
+        Botton31.setBackground(new java.awt.Color(255, 102, 102));
+        Botton31.setPreferredSize(new java.awt.Dimension(75, 45));
+        Botton31.setRoundBottomLeft(15);
+        Botton31.setRoundBottomRight(15);
+        Botton31.setRoundTopLeft(15);
+        Botton31.setRoundTopRight(15);
+        Botton31.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Botton31MouseClicked(evt);
+            }
+        });
+
+        Tortilla.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
+        Tortilla.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Tortilla.setText("TORTILLA UNIDAD");
+        Tortilla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TortillaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Botton31Layout = new javax.swing.GroupLayout(Botton31);
+        Botton31.setLayout(Botton31Layout);
+        Botton31Layout.setHorizontalGroup(
+            Botton31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Tortilla, javax.swing.GroupLayout.PREFERRED_SIZE, 75, Short.MAX_VALUE)
+        );
+        Botton31Layout.setVerticalGroup(
+            Botton31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Tortilla, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -730,7 +770,9 @@ public class Opcion5 extends javax.swing.JPanel {
                             .addComponent(Botton29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(Botton30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Botton30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Botton31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -762,7 +804,9 @@ public class Opcion5 extends javax.swing.JPanel {
                     .addComponent(Botton28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Botton29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Botton30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Botton30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Botton31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -897,11 +941,11 @@ public class Opcion5 extends javax.swing.JPanel {
         if (marca17 == 0) {
             Botton17.setBackground(Botverde);
             marca17 = 1;
-            Num.add(54);
+            Num.add(39);
         } else {
             Botton17.setBackground(Botrojo);
             marca17 = 0;
-            int remov = Num.indexOf(54);
+            int remov = Num.indexOf(39);
             Num.remove(remov);
         }
     }//GEN-LAST:event_Extra3MouseClicked
@@ -1156,6 +1200,24 @@ public class Opcion5 extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void QuesadillaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuesadillaMouseClicked
+        if (marca31 == 0) {
+            Botton31.setBackground(Botverde);
+            marca31 = 1;
+            Num.add(68);
+        } else {
+            Botton31.setBackground(Botrojo);
+            marca31 = 0;
+            int remov = Num.indexOf(68);
+            Num.remove(remov);
+        }
+    }//GEN-LAST:event_QuesadillaMouseClicked
+
+    private void Botton30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Botton30MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Botton30MouseClicked
+
+    private void TortillaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TortillaMouseClicked
+        
         if (marca30 == 0) {
             Botton30.setBackground(Botverde);
             marca30 = 1;
@@ -1166,11 +1228,12 @@ public class Opcion5 extends javax.swing.JPanel {
             int remov = Num.indexOf(68);
             Num.remove(remov);
         }
-    }//GEN-LAST:event_QuesadillaMouseClicked
+        
+    }//GEN-LAST:event_TortillaMouseClicked
 
-    private void Botton30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Botton30MouseClicked
+    private void Botton31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Botton31MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_Botton30MouseClicked
+    }//GEN-LAST:event_Botton31MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1191,6 +1254,7 @@ public class Opcion5 extends javax.swing.JPanel {
     private Clases.PanelRound Botton28;
     private Clases.PanelRound Botton29;
     private Clases.PanelRound Botton30;
+    private Clases.PanelRound Botton31;
     private javax.swing.JLabel ChoAhumado;
     private javax.swing.JLabel ChoArgenti;
     private javax.swing.JLabel ChoriBremen;
@@ -1207,6 +1271,7 @@ public class Opcion5 extends javax.swing.JPanel {
     private javax.swing.JLabel Queso;
     private javax.swing.JLabel SAlchi;
     private javax.swing.JLabel SalPequeña;
+    private javax.swing.JLabel Tortilla;
     private javax.swing.JTextField cantidad;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
